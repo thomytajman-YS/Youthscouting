@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { players } from "@/data/players";
-import { formatClubDisplay, normalizeClubName } from "@/lib/clubs";
+import { getClubFullName, normalizeClubName } from "@/lib/clubs";
 
 export function ClubsSidebar() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
@@ -39,7 +39,7 @@ export function ClubsSidebar() {
               >
                 <span className="flex items-center gap-2">
                   <span className="size-1.5 rounded-full bg-brand" />
-                  <span title={club}>{formatClubDisplay(club)}</span>
+                  <span>{club}</span>
                 </span>
                 <span className="text-[10px] text-slate-500">
                   {list.length} {isOpen ? "▾" : "▸"}

@@ -1,5 +1,6 @@
 const CLUB_ABBREVIATIONS: Record<string, string> = {
   Independiente: "CAI",
+  "San Lorenzo": "CASLA",
   "Argentinos Juniors": "AAAJ",
   "Estudiantes de La Plata": "EdLP",
   "Gimnasia y Esgrima La Plata": "GELP",
@@ -25,6 +26,7 @@ export function getClubFullName(club: string): string {
   return normalizeClubName(club);
 }
 
+/** Espacios angostos (cards, badge del perfil): abreviatura solo si el club tiene una definida. */
 export function formatClubDisplay(club: string): string {
   const full = normalizeClubName(club);
   return CLUB_ABBREVIATIONS[full] ?? full;

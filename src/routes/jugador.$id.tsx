@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { ClubsSidebar } from "@/components/ClubsSidebar";
+import { PlayerPhoto } from "@/components/PlayerPhoto";
 import { players } from "@/data/players";
 import { formatClubDisplay, getClubFullName } from "@/lib/clubs";
 
@@ -18,7 +19,7 @@ export const Route = createFileRoute("/jugador/$id")({
         },
         ...(player
           ? [
-              { property: "og:title", content: `${player.name} — ${formatClubDisplay(player.club)}` },
+              { property: "og:title", content: `${player.name} — ${getClubFullName(player.club)}` },
               { property: "og:image", content: player.image },
             ]
           : []),
@@ -63,11 +64,12 @@ function PlayerPage() {
           <div>
         {/* Hero */}
         <div className="grid gap-8 lg:grid-cols-[1fr_1.2fr]">
-          <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-surface-800">
-            <img
+          <div className="relative">
+            <PlayerPhoto
               src={player.image}
               alt={player.name}
-              className="aspect-[4/5] w-full object-cover"
+              loading="eager"
+              className="aspect-[4/5] w-full rounded-2xl border border-white/5"
             />
             <div
               title={getClubFullName(player.club)}
@@ -86,9 +88,11 @@ function PlayerPage() {
             </h1>
 
             <div className="mt-6 grid grid-cols-2 gap-4 border-y border-white/5 py-6 sm:grid-cols-4">
-              <Info label="Edad" value={`${player.age}`} />
-              <Info label="Altura" value={`${player.height}cm`} />
+              <Info label="Edad" value={`${player.age} años`} />
+              <Info label="Nacimiento" value={`${player.birthYear}`} />
+              <Info label="Altura" value={`${player.height} cm`} />
               <Info label="Pierna" value={player.foot} />
+              <Info label="Nacionalidad" value={player.nationality} />
               <Info label="Rating" value={player.rating.toFixed(1)} highlight />
               <Info
                 label="Club"
@@ -97,7 +101,12 @@ function PlayerPage() {
               />
               <Info label="Categoría" value={player.category} />
               <Info label="Posición" value={player.position} />
-              <Info label="Representante" value={player.agent} />
+              <Info
+                label="Representante"
+                value={player.agent}
+                className="col-span-2 sm:col-span-3"
+                noTruncate
+              />
             </div>
 
             <div className="mt-6 flex gap-3">
@@ -136,7 +145,7 @@ function PlayerPage() {
               {player.scoutingReport}
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Técnica", "Visión", "Proyección elite", "Mentalidad"].map((tag) => (
+              {player.strengths.map((tag) => (
                 <span
                   key={tag}
                   className="rounded-full border border-brand/20 bg-brand/5 px-3 py-1 text-[10px] font-bold uppercase text-brand"
@@ -188,8 +197,13 @@ function PlayerPage() {
             <p className="mt-4 text-base leading-relaxed text-slate-300">
               {player.observations}
             </p>
-            <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/5 pt-4">
-              <Info label="Representante" value={player.agent} />
+            <div className="mt-6 grid grid-cols-2 gap-3 border-t border-white/5 pt-4 sm:grid-cols-4">
+              <Info
+                label="Representante"
+                value={player.agent}
+                className="col-span-2 sm:col-span-3"
+                noTruncate
+              />
               <Info label="Clips" value={`${player.clips.length}`} />
             </div>
           </div>
@@ -206,18 +220,24 @@ function Info({
   value,
   highlight,
   title,
+  className,
+  noTruncate,
 }: {
   label: string;
   value: string;
   highlight?: boolean;
   title?: string;
+  className?: string;
+  noTruncate?: boolean;
 }) {
   return (
-    <div>
+    <div className={className}>
       <div className="text-[10px] uppercase tracking-widest text-slate-500">{label}</div>
       <div
-        title={title}
-        className={`font-display mt-1 truncate text-2xl font-black ${highlight ? "text-brand" : "text-white"}`}
+        title={title ?? (noTruncate ? undefined : value)}
+        className={`font-display mt-1 text-2xl font-black ${highlight ? "text-brand" : "text-white"} ${
+          noTruncate ? "leading-snug" : "truncate"
+        }`}
       >
         {value}
       </div>

@@ -4,7 +4,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { PlayerCard } from "@/components/PlayerCard";
 import { ClubsSidebar } from "@/components/ClubsSidebar";
 import { players, positions, categories, clubs } from "@/data/players";
-import { clubsMatch, formatClubDisplay } from "@/lib/clubs";
+import { clubsMatch, getClubFullName } from "@/lib/clubs";
 
 export const Route = createFileRoute("/explorador")({
   head: () => ({
@@ -81,34 +81,44 @@ function ExplorerPage() {
               value={club}
               onChange={setClub}
               options={clubs}
-              formatOption={(o) => (o === "Todos" ? o : formatClubDisplay(o))}
+              formatOption={(o) => (o === "Todos" ? o : getClubFullName(o))}
             />
 
             <div>
-              <label className="mb-2 block text-[10px] font-bold uppercase tracking-widest text-slate-500">
+              <label className="mb-3 block text-[10px] font-bold uppercase tracking-widest text-slate-500">
                 Edad: {ageRange[0]} – {ageRange[1]}
               </label>
-              <div className="flex items-center gap-3">
-                <input
-                  type="range"
-                  min={14}
-                  max={21}
-                  value={ageRange[0]}
-                  onChange={(e) =>
-                    setAgeRange([Math.min(+e.target.value, ageRange[1]), ageRange[1]])
-                  }
-                  className="flex-1 accent-brand"
-                />
-                <input
-                  type="range"
-                  min={14}
-                  max={21}
-                  value={ageRange[1]}
-                  onChange={(e) =>
-                    setAgeRange([ageRange[0], Math.max(+e.target.value, ageRange[0])])
-                  }
-                  className="flex-1 accent-brand"
-                />
+              <div className="space-y-3">
+                <div>
+                  <span className="mb-1.5 block text-[10px] font-medium uppercase tracking-wider text-slate-600">
+                    Mínimo
+                  </span>
+                  <input
+                    type="range"
+                    min={14}
+                    max={21}
+                    value={ageRange[0]}
+                    onChange={(e) =>
+                      setAgeRange([Math.min(+e.target.value, ageRange[1]), ageRange[1]])
+                    }
+                    className="w-full accent-brand"
+                  />
+                </div>
+                <div>
+                  <span className="mb-1.5 block text-[10px] font-medium uppercase tracking-wider text-slate-600">
+                    Máximo
+                  </span>
+                  <input
+                    type="range"
+                    min={14}
+                    max={21}
+                    value={ageRange[1]}
+                    onChange={(e) =>
+                      setAgeRange([ageRange[0], Math.max(+e.target.value, ageRange[0])])
+                    }
+                    className="w-full accent-brand"
+                  />
+                </div>
               </div>
             </div>
 

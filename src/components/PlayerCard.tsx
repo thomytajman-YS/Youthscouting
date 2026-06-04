@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import type { Player } from "@/data/players";
 import { formatClubDisplay, getClubFullName } from "@/lib/clubs";
+import { PlayerPhoto } from "@/components/PlayerPhoto";
 
 export function PlayerCard({ player }: { player: Player }) {
   const top = player.basicStats.slice(0, 3);
@@ -10,12 +11,11 @@ export function PlayerCard({ player }: { player: Player }) {
       params={{ id: player.id }}
       className="group block overflow-hidden rounded-2xl border border-white/5 bg-surface-800 transition-colors hover:border-brand/40"
     >
-      <div className="relative aspect-[3/4] w-full overflow-hidden bg-surface-900">
-        <img
+      <div className="relative">
+        <PlayerPhoto
           src={player.image}
           alt={player.name}
-          loading="lazy"
-          className="h-full w-full object-contain object-center opacity-90 transition-opacity group-hover:opacity-100"
+          className="aspect-[3/4] w-full"
         />
         <div className="absolute inset-x-4 top-4 flex items-center justify-between gap-2">
           <span

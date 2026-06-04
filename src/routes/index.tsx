@@ -33,7 +33,7 @@ function HomePage() {
           <div className="mb-3 flex items-center gap-2">
             <div className="size-1.5 animate-pulse rounded-full bg-brand"></div>
             <span className="text-[11px] font-bold uppercase tracking-widest text-brand">
-              Temporada 2024/25 · Live
+              Temporada 2026 · Live
             </span>
           </div>
           <h1 className="font-display text-5xl md:text-6xl font-black uppercase italic tracking-tight text-white text-balance">

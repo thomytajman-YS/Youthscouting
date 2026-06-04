@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<title>Racing Club - Sitio Oficial</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5" />
+	<meta name="format-detection" content="telephone=no,address=no,email=no" />
+
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/fonts.css?v=2.2.376" />
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/style.css?v=2.2.376" />
+	<link type="text/css" rel="stylesheet" media="screen" href="/css/swiper.css?v=2.2.376" />
+		<link type="text/css" rel="stylesheet" media="screen" href="/css/responsive.css?v=2.2.376" />
+	
+	<link rel="alternate" type="application/rss+xml" title="Feed RSS" href="/rss/"> 
+	<link href="https://www.racingclub.com.ar/img/logo.svg?v=2.2.376" rel="shortcut icon" />
+	<link href="https://www.racingclub.com.ar/img/logo.svg?v=2.2.376" rel="icon" />
+	<link href="https://www.racingclub.com.ar/img/image_src.png?v=2026" rel="image_src" />
+	<link href="https://www.racingclub.com.ar/img/icon.png?v=2.2.376" rel="apple-touch-icon-precomposed" />
+		<meta name="description" content="Sitio oficial de Racing Club, el Primer Grande - Argentina" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Racing Club - Sitio Oficial" />
+	<meta property="og:description" content="Sitio oficial de Racing Club, el Primer Grande - Argentina" />		
+	<meta name="twitter:title" content="Racing Club - Sitio Oficial">
+	<meta name="twitter:description" content="Sitio oficial de Racing Club, el Primer Grande - Argentina">
+		<meta property="og:url" content="https://www.racingclub.com.ar/" />
+	<meta property="twitter:url" content="https://www.racingclub.com.ar/" />
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="https://www.racingclub.com.ar/img/image_src.png?v=2026">
+	<meta name="twitter:site" content="@RacingClub">
+	<meta name="twitter:creator" content="@RacingClub">
+	<meta property="og:image" content="https://www.racingclub.com.ar/img/image_src.png?v=2026" />
+	<meta property="og:site_name" content="Racing Club - Sitio Oficial" />
+	<meta name="keywords" content="Racing, Racing Club, Primer Grande" />
+
+</head>
+<body>	
+
+	<div id="header">
+		<div class="bg-blur"></div>
+		<div class="header-wrapper">
+			<div class="logo">
+				<h1>
+				<a href="/" title="Racing Club - Sitio Oficial">
+					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 438 120" style="enable-background:new 0 0 438 120;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:#FFFFFF;}
+						.st1{fill:#67BEF4;}
+						@media only screen and (max-width: 480px) {
+							#epg{display:none;}
+						}
+					</style>
+					<g id="epg">
+						<path class="st0 logo-border" d="M114,79.9v7.7h10.3c-1.6,1.5-4.8,2.9-10.8,2.9c-10.2,0-12.9-5.1-12.9-9.2v-0.6c0-4.4,2.4-9,12.8-9
+							c7.5,0,10.6,2.2,11.8,4h12.4c-0.7-4.5-5-12.4-23.2-12.4h-1.9c-20.6,0-23.3,10.9-23.3,17.2v1.4c0,6.2,3.1,17.5,23.3,17.5h1.9
+							c7.1,0,12.1-1.2,15.6-3v2.4h7.7V85.8v-2v-4H114z"/>
+						<path class="st0 logo-border" d="M153,98.6h-10.8V64h27.9c11.5,0,15,4,15,9v0.6c0,5-4.1,6.8-6.4,7.6c3.5,1,6.6,3.5,6.6,8v5.1
+							c0,2.8,0.3,3.7,0.7,4.2v0.2h-11c-0.3-0.4-0.5-0.9-0.5-2.2v-4c0-4.2-1.9-6.1-7.2-6.1H153V98.6z M153,78.6h16.4
+							c3.1,0,4.4-1.5,4.4-3.4v0c0-1.8-1.2-3.3-4.4-3.3H153V78.6z"/>
+						<path class="st0 logo-border" d="M221.8,92.2h-21l-3.1,6.3h-11L204.2,64h14l18.5,34.6h-11.7L221.8,92.2z M211.1,71.5l-6.4,13h13.1L211.1,71.5z"
+							/>
+						<polygon class="st0 logo-border" points="250.4,64 272.5,85.7 272.5,64 283.2,64 283.2,98.6 272.5,98.6 249,75.6 249,98.6 238.3,98.6 238.3,64 
+								"/>
+						<path class="st0 logo-border" d="M288,64h22.9c20,0,24.4,8.6,24.4,16.4v1.4c0,7.4-4.1,16.8-24.4,16.8h-23V64z M298.8,90.3h11.3
+							c12.3,0,13.9-5.4,13.9-8.9V81c0-3.5-1.4-8.9-13.9-8.9h-11.3V90.3z"/>
+						<polygon class="st0 logo-border" points="375,64 375,71.8 349.2,71.8 349.2,77 374.4,77 374.4,84.9 349.2,84.9 349.2,90.5 375.4,90.5 
+							375.4,98.6 338.5,98.6 338.5,64 	"/>
+						<polygon class="st0 logo-border" points="127,17.7 127,25.6 101.2,25.6 101.2,30.7 126.4,30.7 126.4,38.6 101.2,38.6 101.2,44.3 127.4,44.3 
+							127.4,52.3 90.5,52.3 90.5,17.7 	"/>
+						<polygon class="st0 logo-border" points="142.4,17.7 142.4,43.7 166.4,43.7 166.4,52.3 131.5,52.3 131.5,17.7 	"/>
+						<path class="st0 logo-border" d="M189.5,40.8v11.5h-10.8V17.7h26c12.5,0,16.1,4.9,16.1,11.3v0.5c0,6.2-3.8,11.3-16.1,11.3H189.5z M189.5,33
+							h14.9c3.4,0,5-1.3,5-3.6v-0.1c0-2.4-1.5-3.7-5-3.7h-14.9V33z"/>
+						<path class="st0 logo-border" d="M235.1,52.3h-10.8V17.7h27.9c11.5,0,15,4,15,9v0.6c0,5-4.1,6.8-6.4,7.6c3.5,1,6.6,3.5,6.6,8v5.1
+							c0,2.8,0.3,3.7,0.7,4.2v0.2h-11c-0.3-0.4-0.5-0.9-0.5-2.2v-4c0-4.2-1.9-6.1-7.2-6.1h-14.1V52.3z M235.1,32.3h16.4
+							c3.1,0,4.4-1.5,4.4-3.4v0c0-1.8-1.2-3.3-4.4-3.3h-16.4V32.3z"/>
+						<polygon class="st0 logo-border" points="292.7,17.7 308.1,17.7 320,39.2 332,17.7 346.9,17.7 346.9,52.3 336.2,52.3 336.2,28.3 322.6,52.3 
+							316.7,52.3 303.1,28.3 303.1,52.3 292.7,52.3 	"/>
+						<polygon class="st0 logo-border" points="388.2,17.7 388.2,25.6 362.4,25.6 362.4,30.7 387.6,30.7 387.6,38.6 362.4,38.6 362.4,44.3 
+							388.7,44.3 388.7,52.3 351.7,52.3 351.7,17.7 	"/>
+						<path class="st0 logo-border" d="M403.6,52.3h-10.8V17.7h27.9c11.5,0,15,4,15,9v0.6c0,5-4.1,6.8-6.4,7.6c3.5,1,6.6,3.5,6.6,8v5.1
+							c0,2.8,0.3,3.7,0.7,4.2v0.2h-11c-0.3-0.4-0.5-0.9-0.5-2.2v-4c0-4.2-1.9-6.1-7.2-6.1h-14.1V52.3z M403.6,32.3H420
+							c3.1,0,4.4-1.5,4.4-3.4v0c0-1.8-1.2-3.3-4.4-3.3h-16.4V32.3z"/>
+						<path class="st0 logo-border" d="M274.9,24.7l0,33.2l1.9-1.1c0.5-0.2,0.9-0.4,1.4-0.6c1.4-0.5,2.7-0.6,4-0.7c1.8-0.2,2.9-0.3,3.8-1
+							c0.1-0.1,0.1-0.1,0.2-0.2c0.3-0.3,0.4-0.6,0.4-1l0-39l-15.7,10.4H274.9z"/>
+					</g>
+					<g>
+						<polygon class="st1" points="24.8,26.8 24.8,26.8 24.4,27.7 22.8,30.9 26.7,30.9 25.2,27.7 	"/>
+						<path class="st1" d="M4,20.2v67.7c0,1.5,0.6,2.7,1.8,3.8c1.2,1,2.9,1.8,5.1,2.5c4.1,1.2,8.2,1.2,8.3,1.2c7.4,0,14,2.4,18.6,6.9l0,0
+							l0,0c4.5-4.4,11.1-6.9,18.6-6.9c0,0,4.2,0,8.3-1.2c2.2-0.6,3.9-1.5,5.1-2.5c1.3-1.1,1.8-2.3,1.8-3.8V20.2l0,0H4z M11,31.1v3.2H8.8
+							v-8.9h4.7c2.7,0,4.1,1,4.1,2.8c0,1.2-0.8,2.3-2.3,2.5l0,0l3.2,3.6h-2.6l-2.4-3.2H11z M23.2,93.2C23.2,93.2,23.2,93.2,23.2,93.2
+							L23.2,93.2c-1.3-0.1-2.7-0.2-4.1-0.2c-0.1,0-1.1,0-2.5-0.2c-0.9-0.1-2-0.2-3.1-0.4v0c0,0,0,0,0,0V39.6v0v0h0v0v0h1.1
+							c2.6,0,5.5,0,8.6,0V93.2z M28.4,34.3l-0.9-1.8H22l-0.9,1.8h-2.3l4.8-8.9H26l4.8,8.9H28.4z M30.7,29.8c0-2.7,1.7-4.6,5.7-4.6
+							c1.1,0,2.3,0.2,3,0.5l-0.2,1.7h0c-0.7-0.2-1.7-0.4-2.8-0.4c-2.6,0-3.5,0.9-3.5,2.8c0,2.1,0.9,2.9,3.5,2.9c1,0,1.9-0.2,2.7-0.5
+							l0.3,1.6c-0.9,0.4-2.1,0.7-3.2,0.7C32.5,34.5,30.7,32.8,30.7,29.8 M42.6,96C42.6,96,42.6,96,42.6,96L42.6,96c-1.7,1-3.4,2-4.8,3.2
+							c-1.1-0.9-2.3-1.8-3.5-2.5c0,0,0,0,0,0c0,0,0,0,0,0c-0.4-0.2-0.8-0.5-1.3-0.7V39.6l0,0h0v0l0,0h9.7v0h0V96z M43.3,34.3h-2.2v-8.9
+							h2.2V34.3z M47.6,28.1L47.6,28.1l0,1v5.2h-2v-8.9h1.8l5.4,5.3l0.7,0.7l0,0l0-1v-5h1.9v8.9h-1.4l-5.8-5.5L47.6,28.1z M61.9,92.4
+							C61.9,92.4,61.9,92.4,61.9,92.4L61.9,92.4c-2,0.4-4.1,0.6-5.6,0.6c0,0,0,0,0,0c0,0,0,0,0,0h0c0,0,0,0,0,0c-1.2,0-2.4,0.1-3.5,0.2
+							c-0.2,0-0.4,0-0.5,0.1V39.6v0v0h0l0,0v0h9.7v0h0V92.4z M66.6,33.9c-0.9,0.3-2.4,0.6-3.7,0.6c-4.1,0-5.9-1.8-5.9-4.6
+							c0-2.9,1.8-4.7,5.9-4.7c1.2,0,2.5,0.2,3.5,0.5l-0.2,1.7c-0.9-0.3-2-0.5-3.1-0.5c-2.7,0-3.7,0.8-3.7,2.9c0,2,0.9,2.9,3.5,2.9
+							c0.7,0,1.3-0.1,1.9-0.2v-2.8h1.9V33.9z"/>
+						<path class="st1" d="M13.4,27H11v2.7h2.4c1.4,0,2-0.4,2-1.4C15.3,27.4,14.8,27,13.4,27"/>
+						<path class="st1" d="M13.5,39.6L13.5,39.6l0,52.8c0,0,0,0,0,0L13.5,39.6z"/>
+						<path class="st1" d="M19.1,93c-0.1,0-1,0-2.5-0.1C18.1,93,19.1,93,19.1,93c1.4,0,2.7,0.1,4.1,0.3v0c-1.3-0.1-2.6-0.2-3.9-0.2H19.1z
+							"/>
+						<polygon class="st1" points="42.6,96 42.6,96 42.6,39.6 42.6,39.6 	"/>
+						<path class="st1" d="M32.9,96V39.6h0l0,0L32.9,96c0.4,0.2,0.8,0.5,1.3,0.7C33.7,96.5,33.3,96.2,32.9,96L32.9,96z"/>
+						<path class="st1" d="M34.2,96.8C34.2,96.7,34.2,96.7,34.2,96.8C34.2,96.7,34.2,96.7,34.2,96.8"/>
+						<path class="st1" d="M52.8,93.2c1.1-0.1,2.3-0.2,3.5-0.2c0,0,0,0,0,0h-0.1C55,93,53.9,93.1,52.8,93.2"/>
+						<path class="st1" d="M61.9,92.4C61.9,92.4,61.9,92.4,61.9,92.4l0-52.8h0V92.4z"/>
+						<path class="st1" d="M56.4,93C56.3,93,56.3,93,56.4,93C56.3,93,56.3,93,56.4,93"/>
+						<polygon class="st1" points="52.2,39.6 52.2,39.6 52.2,39.6 	"/>
+						<path class="st1" d="M13.5,92.4c1.2,0.2,2.2,0.4,3.1,0.4C15.8,92.8,14.7,92.6,13.5,92.4L13.5,92.4z"/>
+						<path class="st1" d="M23.2,39.6v53.7c0,0,0,0,0,0L23.2,39.6c-3.1,0-5.9,0-8.6,0H23.2z"/>
+						<path class="st1" d="M13.5,39.6L13.5,39.6L13.5,39.6z"/>
+						<path class="st0" d="M14.6,39.6h-1.1l0,52.8c1.1,0.2,2.2,0.4,3.1,0.5c1.4,0.1,2.4,0.1,2.5,0.1h0.2c1.3,0,2.6,0.1,3.9,0.2V39.6H14.6
+							z"/>
+						<path class="st1" d="M34.2,96.7C34.2,96.7,34.2,96.7,34.2,96.7C34.2,96.7,34.2,96.7,34.2,96.7"/>
+						<polygon class="st1" points="42.6,39.6 32.9,39.6 32.9,39.6 32.9,39.6 42.6,39.6 	"/>
+						<path class="st1" d="M34.2,96.8c1.3,0.7,2.4,1.6,3.5,2.5c1.4-1.2,3.1-2.3,4.8-3.2V96c-1.7,0.9-3.4,1.9-4.8,3.1
+							C36.6,98.2,35.5,97.5,34.2,96.8"/>
+						<path class="st0" d="M32.9,39.6V96v0c0.4,0.2,0.9,0.4,1.3,0.7c0,0,0,0,0,0c0,0,0,0,0,0c1.2,0.7,2.4,1.5,3.5,2.4
+							c1.5-1.2,3.1-2.2,4.8-3.1V39.6H32.9z"/>
+						<path class="st1" d="M61.9,92.4L61.9,92.4c-2.7,0.5-5.1,0.6-5.5,0.6C57.8,93,59.9,92.8,61.9,92.4"/>
+						<path class="st1" d="M56.3,93C56.3,93,56.3,93,56.3,93C56.3,93,56.3,93,56.3,93L56.3,93z"/>
+						<path class="st1" d="M52.2,39.6L52.2,39.6L52.2,39.6L52.2,39.6l0,53.7c0.2,0,0.4,0,0.5-0.1c-0.2,0-0.4,0-0.5,0.1V39.6z"/>
+						<rect x="52.2" y="39.6" class="st1" width="9.7" height="0"/>
+						<path class="st0" d="M52.2,39.6v53.7c0.2,0,0.4,0,0.5-0.1c1.1-0.1,2.3-0.2,3.4-0.2h0.1c0,0,0,0,0,0c0,0,0,0,0,0
+							c0.5,0,2.9-0.1,5.5-0.6V39.6H52.2z"/>
+						<rect x="52.2" y="39.6" class="st1" width="0" height="0"/>
+						<path class="st0" d="M18.5,34.3l-3.2-3.6l0,0c1.5-0.2,2.3-1.3,2.3-2.5c0-1.8-1.4-2.8-4.1-2.8H8.8v8.9H11v-3.2h2.5l2.4,3.2H18.5z
+							 M13.3,29.7H11V27h2.5c1.4,0,1.9,0.4,1.9,1.3C15.3,29.2,14.8,29.7,13.3,29.7"/>
+						<path class="st0" d="M23.6,25.4l-4.8,8.9h2.3l0.9-1.8h5.5l0.9,1.8h2.4L26,25.4H23.6z M22.8,30.9l1.6-3.2l0.4-0.9h0l0.4,0.9l1.6,3.2
+							H22.8z"/>
+						<path class="st0" d="M39.5,33.8l-0.3-1.6c-0.8,0.3-1.7,0.5-2.7,0.5c-2.6,0-3.5-0.8-3.5-2.9c0-2,0.9-2.8,3.5-2.8
+							c1.1,0,2,0.2,2.8,0.4h0l0.2-1.7c-0.8-0.3-1.9-0.5-3-0.5c-4,0-5.7,1.9-5.7,4.6c0,2.9,1.8,4.7,5.5,4.7C37.4,34.5,38.6,34.2,39.5,33.8
+							"/>
+						<rect x="41.1" y="25.4" class="st0" width="2.2" height="8.9"/>
+						<polygon class="st0" points="55.5,34.3 55.5,25.4 53.5,25.4 53.5,30.4 53.5,31.4 53.5,31.4 52.8,30.7 47.4,25.4 45.6,25.4 
+							45.6,34.3 47.6,34.3 47.6,29.1 47.5,28.1 47.6,28.1 48.2,28.8 54.1,34.3 	"/>
+						<path class="st0" d="M64.8,32.5c-0.5,0.2-1.2,0.2-1.9,0.2c-2.6,0-3.5-0.9-3.5-2.9c0-2.1,1-2.9,3.7-2.9c1.1,0,2.2,0.2,3.1,0.5
+							l0.2-1.7c-1-0.3-2.3-0.5-3.5-0.5c-4.1,0-5.9,1.8-5.9,4.7c0,2.9,1.7,4.6,5.9,4.6c1.3,0,2.7-0.2,3.7-0.6v-4.3h-1.9V32.5z"/>
+						<path class="st0 logo-border" d="M73.9,17.7H1.5v70.1c0,9.8,17.5,10,17.6,10c6.7,0,12.8,2.2,16.8,6.2l1.7,1.7l1.7-1.7c4.1-4,10.1-6.2,16.8-6.2
+							c0.2,0,17.6-0.1,17.6-10L73.9,17.7L73.9,17.7z M71.5,87.9c0,1.5-0.6,2.7-1.8,3.8c-1.2,1-2.9,1.8-5.1,2.5c-4.1,1.2-8.2,1.2-8.3,1.2
+							c-7.4,0-14,2.4-18.6,6.9l0,0l0,0c-4.5-4.4-11.1-6.9-18.6-6.9c0,0-4.2,0-8.3-1.2c-2.2-0.6-3.9-1.5-5.1-2.5C4.6,90.6,4,89.4,4,87.9
+							V20.2h67.5l0,0V87.9z"/>
+					</g>
+					</svg>
+				</a>
+				</h1>
+			</div>
+
+			<a id="rpass_button" href="https://pass.racingclub.com.ar/">Ir a RacingPass</a>
+
+			<div id="menu_button">
+				<span class="top"></span>
+				<span class="middle"></span>
+				<span class="bottom"></span>
+			</div>	
+
+		</div>
+
+		<nav>
+		<div id="menu">	
+			<div class="social">
+				<h4>¡Seguí a Racing!</h4>
+				<ul>
+					<li class="noborder"><a class="sp" href="https://open.spotify.com/user/racingcluboficial" target="_blank"><span class="icon-spotify" title="Spotify"></span></a></li>
+					<li><a class="yt" href="https://www.youtube.com/racingcluboficial" target="_blank"><span class="icon-youtube" title="You Tube"></span></a></li>
+					<li><a class="ig" href="https://instagram.com/racingclub" target="_blank"><span class="icon-instagram" title="Instagram"></span></a></li>
+					<li><a class="tw" href="https://twitter.com/racingclub" target="_blank"><span class="icon-twitter" title="Twitter"></span></a></li>
+					<li><a class="fb" href="https://www.facebook.com/racingcluboficial" target="_blank"><span class="icon-facebook" title="Facebook"></span></a></li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<ul class="menu">
+<li class='item active'>
+<a class='seccion club' href='#'>El Club</a>
+<div class='desplegable club'>
+<div class='columna'>
+<h4>Historia</h4>
+<ul>
+<li><a href='/escudo'>El Escudo</a></li>
+<li><a href='/palmares'>Palmarés</a></li>
+<li><a href='/idolos'>Ídolos</a></li>
+<li><a href='/efemerides'>Efemérides</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Sedes y Predios</h4>
+<ul>
+<li><a href='/estadio'>Estadio Presidente Perón</a></li>
+<li><a href='/sede-avellaneda'>Sede Avellaneda</a></li>
+<li><a href='/sede-capital'>Sede Capital</a></li>
+<li><a href='/predio-tita-mattiussi'>Predio Tita Mattiussi</a></li>
+<li><a href='/casa-tita-mattiussi'>Casa Tita Mattiussi</a></li>
+<li><a href='/colegio'>Colegio Racing Club</a></li>
+<li><a href='/polideportivo'>Polideportivo Avellaneda</a></li>
+<li><a href='/predio-ezeiza'>Predio Ezeiza</a></li>
+</ul>
+</div>
+<ul class='columna'>
+<li class='subitem'><a href='https://pass.racingclub.com.ar/' target='_blank'>RacingPass</a></li>
+<li class='subitem'><a href='/informes/'>Informes y Balances</a></li>
+<li class='subitem'><a href='/club/noticias/'>Noticias</a></li>
+<li class='subitem'><a href='http://locademia.racingclub.com.ar/' target='_blank'>Locademia Online</a></li>
+<li class='subitem'><a href='/comision-directiva/'>Comisión Directiva</a></li>
+<li class='subitem'><a href='/club/sponsors-y-proveedores/'>Sponsors y Proveedores</a></li>
+<li class='subitem'><a href='/club/certificaciones-de-calidad/'>Certificaciones de Calidad</a></li>
+<li class='subitem'><a href='/vidas-racinguistas/'>Vidas Racinguistas</a></li>
+</ul>
+</div>
+</li>
+
+<li class='item'>
+<a class='seccion socios' href='#'>Socios</a>
+<div class='desplegable socios'>
+<div class='columna'>
+<h4>Hacete Socio</h4>
+<ul>
+<li><a href='/asociate'>¡Asociate ahora!</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Cuota social</h4>
+<ul>
+<li><a href='/socios/paga-tu-cuota'>¿Cómo abonar tu cuota?</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Otras consultas</h4>
+<ul>
+<li><a href='/faqs'>Preguntas Frecuentes</a></li>
+<li><a href='/filiales'>Filiales</a></li>
+<li><a href='/socios/entradas'>Venta de Entradas</a></li>
+<li><a href='/deportes'>Deportes</a></li>
+</ul>
+</div>
+<ul class='columna'>
+</ul>
+</div>
+</li>
+
+<li class='item'>
+<a class='seccion futbol' href='#'>Fútbol</a>
+<div class='desplegable futbol'>
+<div class='columna'>
+<h4>Fútbol Masculino</h4>
+<ul>
+<li><a href='/futbol/primer-equipo/noticias'>Noticias</a></li>
+<li><a href='/futbol/primer-equipo/plantel'>Plantel Profesional</a></li>
+<li><a href='/futbol/primer-equipo/estadisticas'>Estadísticas</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Reserva</h4>
+<ul>
+<li><a href='/futbol/reserva/noticias'>Noticias</a></li>
+<li><a href='/futbol/reserva/selectivo'>Plantel Selectivo Reserva</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Juveniles</h4>
+<ul>
+<li><a href='/futbol/juveniles/noticias'>Noticias</a></li>
+<li><a href='/futbol/cuarta-division'>Cuarta División</a></li>
+<li><a href='/futbol/quinta-division'>Quinta División</a></li>
+<li><a href='/futbol/sexta-division'>Sexta División</a></li>
+<li><a href='/futbol/septima-division'>Séptima División</a></li>
+<li><a href='/futbol/octava-division'>Octava División</a></li>
+<li><a href='/futbol/novena-division'>Novena División</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Fútbol Femenino</h4>
+<ul>
+<li><a href='/futbol/femenino/noticias'>Noticias</a></li>
+<li><a href='/futbol/plantel-femenino'>Plantel Profesional </a></li>
+<li><a href='/futbol/reserva-femenino'>Sub 19</a></li>
+<li><a href='/futbol/sub-14-femenino'>Sub-14 </a></li>
+<li><a href='/futbol/sub-16-femenino'>Sub-16 </a></li>
+</ul>
+</div>
+<ul class='columna'>
+<li class='subitem'><a href='/futbol/pasantias-deportivas/'>Pasantías Deportivas</a></li>
+<li class='subitem'><a href='/futbol/pruebas/'>Pruebas de jugadores</a></li>
+</ul>
+</div>
+</li>
+
+<li class='item'>
+<a class='seccion deportes' href='#'>Deportes</a>
+<div class='desplegable deportes'>
+<div class='columna'>
+<h4>Avellaneda</h4>
+<ul>
+<li><a href='/deportes/avellaneda/atletismo'>Atletismo</a></li>
+<li><a href='/deportes/avellaneda/basquet'>Básquet</a></li>
+<li><a href='/deportes/avellaneda/boxeo'>Boxeo</a></li>
+<li><a href='/deportes/avellaneda/futbol-playa'>Fútbol Playa</a></li>
+<li><a href='/deportes/avellaneda/futsal-femenino'>Futsal Femenino</a></li>
+<li><a href='/deportes/avellaneda/futsal-masculino'>Futsal Masculino</a></li>
+<li><a href='/deportes/avellaneda/handball'>Handball</a></li>
+<li><a href='/deportes/avellaneda/hockey-cesped'>Hockey sobre césped</a></li>
+<li><a href='/deportes/avellaneda/saltos-ornamentales'>Saltos ornamentales</a></li>
+<li><a href='/deportes/avellaneda/tenis'>Tenis</a></li>
+</ul>
+</div>
+<div class='columna'>
+<h4>Capital</h4>
+<ul>
+<li><a href='/deportes/capital/basquet'>Básquet</a></li>
+<li><a href='/deportes/capital/danza'>Danza</a></li>
+<li><a href='/deportes/capital/esgrima'>Esgrima</a></li>
+<li><a href='/deportes/capital/futbol-infantil'>Fútbol infantil</a></li>
+<li><a href='/deportes/capital/futsal-femenino'>Fútsal Femenino</a></li>
+<li><a href='/deportes/capital/gimnasia-artistica'>Gimnasia artística</a></li>
+<li><a href='/deportes/capital/handball'>Handball</a></li>
+<li><a href='/deportes/capital/judo'>Judo</a></li>
+<li><a href='/deportes/capital/muay-thai'>Muay Thai</a></li>
+<li><a href='/deportes/capital/patin-artistico'>Patín Artístico</a></li>
+<li><a href='/deportes/capital/taekwondo'>Taekwon-do</a></li>
+<li><a href='/deportes/capital/voley'>Voley</a></li>
+</ul>
+</div>
+<ul class='columna'>
+</ul>
+</div>
+</li>
+
+<li class='item'>
+<a class='seccion areas' href='#'>Áreas</a>
+<div class='desplegable areas'>
+<ul class='columna'>
+<li class='subitem'><a href='/tribunal-de-conducta/'>Tribunal de Conducta</a></li>
+<li class='subitem'><a href='/areas/racing-solidario/'>Racing Solidario</a></li>
+<li class='subitem'><a href='/areas/racing-sustentable/'>Racing Sustentable</a></li>
+<li class='subitem'><a href='/areas/archivo-historico/'>Archivo Histórico</a></li>
+<li class='subitem'><a href='/areas/comision-memoria/'>Comisión de la Memoria</a></li>
+<li class='subitem'><a href='/areas/comision-fiscalizadora/'>Comisión Fiscalizadora</a></li>
+<li class='subitem'><a href='/areas/dpto-genero-y-ddhh/'>Dpto. Género y DD.HH.</a></li>
+<li class='subitem'><a href='/areas/comercial/'>Dto Comercial</a></li>
+<li class='subitem'><a href='/areas/prensa/'>Dto Comunicación y Prensa</a></li>
+<li class='subitem'><a href='/areas/cultura/'>Dto Cultura</a></li>
+<li class='subitem'><a href='/areas/ddh/'>Dto del Hincha</a></li>
+<li class='subitem'><a href='/areas/dto-filiales/'>Dto Filiales</a></li>
+<li class='subitem'><a href='/areas/dto-genero-y-derechos-humanos/'>Dto Género y Derechos Humanos</a></li>
+<li class='subitem'><a href='/areas/dto-historia/'>Dto Historia</a></li>
+<li class='subitem'><a href='/areas/infraestructura/'>Dto Infraestructura</a></li>
+<li class='subitem'><a href='/areas/dto-legales/'>Dto Legales</a></li>
+<li class='subitem'><a href='/areas/marketing/'>Dto Marketing</a></li>
+<li class='subitem'><a href='/areas/vitalicios/'>Dto Vitalicios</a></li>
+<li class='subitem'><a href='/areas/racing-integrado/'>Racing Integrado / Dto Discapacidad</a></li>
+<li class='subitem'><a href='/areas/rr-hh/'>Recursos Humanos</a></li>
+<li class='subitem'><a href='/areas/relaciones-internacionales/'>Relaciones Internacionales</a></li>
+<li class='subitem'><a href='/areas/rr-pp/'>RR. PP.</a></li>
+</ul>
+</div>
+</li>
+
+    <li class="item menu_search">
+        <form method="get" action="/buscador/" onsubmit="if (!document.getElementById('menu_search_q').value.length) { return false; }">
+            <input type="text" id="menu_search_q" name="q" value="" title="Buscar" placeholder="Buscar" onfocus="this.placeholder=''" onblur="this.placeholder='Buscar'" />
+            <button type="submit" title="Iniciar búsqueda" onsubmit="if (!document.getElementById('menu_search_q').value.length) { document.getElementById('menu_search_q').focus(); return false; }"><span class="icon icon-search"></span></button>
+        </form>    
+    </li>
+</ul>
+		</div>
+		</nav>
+
+	</div>
+
+
+	<div id="wrap">
+		<section>
+<div id="error404">
+	<h2>Página no<br /> encontrada</h2>
+	<p><a href="/">&laquo; volver al inicio</a></p>
+</div>
+</section>
+
+	<aside>
+	<div class="banner big" style="max-width:750px;height:auto;padding:0 5%;">
+		<div class="swiper-slide"><a href="https://www.personal.com.ar/" target="_blank"><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/banners/personal_racing-750x100.gif" alt="Personal" width="750" height="100" /></a></div>		<div class="clear"></div>
+	</div>
+	</aside>
+	
+	<footer>
+		<div id="footer">
+			
+			<aside>
+			<div id="sponsors">
+			
+					<h4 class="title">Main sponsor</h4>
+			
+				<ul class="mainsponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/betsson_web.png?v=2.2.376" alt="Betsson" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Sponsor técnico</h4>
+			
+				<ul class="mainsponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/nike.png?v=2.2.376" alt="NIKE" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Sponsors oficiales de fútbol masculino</h4>
+			
+				<ul class="sponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/American Vial.png?v=2.2.376" alt="American Vial" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/betsson_web.png?v=2.2.376" alt="Betsson" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/Cetrogar.png?v=2.2.376" alt="Cetrogar" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/pax web.png?v=2.2.376" alt="PAX" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/RUS-web (1).png?v=2.2.376" alt="R&iacute;o Uruguay Seguros" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Sponsors oficiales de fútbol femenino</h4>
+			
+				<ul class="sponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/capitan-cuac.png?v=2.2.376" alt="Capitan Cuac" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/locademia.png?v=2.2.376" alt="Locademia" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/org sur.png?v=2.2.376" alt="Organizaci&oacute;n Sur" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/quilmes.png?v=2.2.376" alt="Quilmes" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/RUS-web (1).png?v=2.2.376" alt="R&iacute;o Uruguay Seguros" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Sponsor oficial de deportes amateurs</h4>
+			
+				<ul class="sponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/algabo.png?v=2.2.376" alt="Algabo" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/alliance.png?v=2.2.376" alt="Alliance" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/giorgio-redaelli.png?v=2.2.376" alt="Giorgio Redaelli" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/latcomex.png?v=2.2.376" alt="Latcomex" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/primicia-01.png?v=2.2.376" alt="PRIMICIA" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/union gan.png?v=2.2.376" alt="Uni&oacute;n Ganadera" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Sponsors oficiales</h4>
+			
+				<ul class="sponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/EA-SPORTS-FC_web.png?v=2.2.376" alt="EA Sports FC" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/quilmes.png?v=2.2.376" alt="Quilmes" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/coca-cola.png?v=2.2.376" alt="Coca Cola" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/sinteplast.png?v=2.2.376" alt="Sinteplast" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/swissmedical_web.png?v=2.2.376" alt="Swiss Medical" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/PERSONAL WEB.png?v=2.2.376" alt="Personal" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/flecha-bus.png?v=2.2.376" alt="Flecha Bus" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					<h4 class="title">Proveedores oficiales</h4>
+			
+				<ul class="sponsors">
+
+							<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/Acudir_web (1).png?v=2.2.376" alt="Acudir" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/basani.png?v=2.2.376" alt="Basani" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/bluemail.png?v=2.2.376" alt="BlueMail" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/ferrum.png?v=2.2.376" alt="FERRUM" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/gentech.png?v=2.2.376" alt="Gentech" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/profit_web.png?v=2.2.376" alt="Profit" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/Saint-Gobain.png?v=2.2.376" alt="Saint-Gobain" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/smartway_web.png?v=2.2.376" alt="Smartway" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/archivos-activos.png?v=2.2.376" alt="Archivos Activos" width="100" height="75" /></li>
+									<li><img class="lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/sponsors/data_factory_web.png?v=2.2.376" alt="Data Factory" width="100" height="75" /></li>
+					
+				</ul>	
+				
+				<div class="clear"></div>
+			
+					
+			</div>
+
+			
+			<div class="legales">
+
+				<img class="escudo-foot lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/escudo-foot.svg?v=2.2.376" alt="Racing Club" width="290" height="80" />
+
+				<p style="user-select: text;" class="no-auto-link" 
+				   data-no-link="true">
+					Edición n&deg; 5053 / Junio de 2026 / Dirección y propiedad de Racing Club AC / <span style="unicode-bidi:bidi-override;direction:ltr;">Avenida Mitre 934, Avellaneda</span>
+				</p>
+
+				<a href="https://qr.afip.gob.ar/?qr=rSUfXHtEi279pKt5Wv74Nw,," target="_F960AFIPInfo"><img class="datafiscal lazyload" loading="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEHAAEALAAAAAABAAEAAAICTAEAOw==" data-src="/img/i-datafiscal.png" alt="AFIP Data Fiscal" width="48" height="65" /></a>
+
+			</div>
+			</aside>
+
+			<div class="clear"></div>
+			
+		</div>	
+	</footer>
+
+	</div><!-- wrap -->
+	
+	<script type="text/javascript">
+	if ('loading' in HTMLImageElement.prototype) {
+		const images = document.querySelectorAll('img[loading="lazy"]');
+		images.forEach(img => {
+			img.src = img.dataset.src;
+
+			const width = img.getAttribute('width');
+			const height = img.getAttribute('height');
+			if (width && height) {
+				img.style.aspectRatio = `${width} / ${height}`;
+			}
+
+			img.addEventListener('error', () => {
+				if (img.dataset.load !== 'error') {
+					img.src = img.dataset.src; // intentar recargar
+					img.dataset.load = 'error';
+				}
+			});
+		});
+	} else {
+		// Cargar LazySizes para navegadores que no soportan 'loading=lazy'
+		const script = document.createElement('script');
+		script.src = '/js/lazysizes.min.js';
+		script.async = true;
+		document.body.appendChild(script);
+	}
+	</script>	
+	<script type="text/javascript" src="/js/jquery.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.swiper.min.js"></script>
+	<script type="text/javascript" src="/js/scripts.js?v=2.2.376"></script>
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C1E94WGDRG"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-C1E94WGDRG');
+	</script>
+</body>
+</html>
