@@ -1,12 +1,63 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { SiteNav } from "@/components/SiteNav";
 import { PlayerCard } from "@/components/PlayerCard";
 import { ClubsSidebar } from "@/components/ClubsSidebar";
 import { players, positions, categories, clubs } from "@/data/players";
-import { clubsMatch, getClubFullName } from "@/lib/clubs";
+import {
+  defaultExplorerFilters,
+  filterPlayers,
+  isQuickFilterId,
+  isValidCategory,
+  isValidPosition,
+  quickFilters,
+  resolveExplorerFilters,
+  type QuickFilterId,
+} from "@/lib/explorer-filters";
+import { getClubFullName } from "@/lib/clubs";
+
+type ExplorerSearch = {
+  preset?: QuickFilterId;
+  q?: string;
+  position?: string;
+  category?: string;
+  club?: string;
+  ageMin?: number;
+  ageMax?: number;
+  minHeight?: number;
+  minGoals?: number;
+  minAssists?: number;
+  foot?: "Izquierdo" | "Derecho" | "Ambidiestro";
+};
 
 export const Route = createFileRoute("/explorador")({
+  validateSearch: (search: Record<string, unknown>): ExplorerSearch => {
+    const next: ExplorerSearch = {};
+
+    if (typeof search.preset === "string" && isQuickFilterId(search.preset)) {
+      next.preset = search.preset;
+    }
+    if (typeof search.q === "string") next.q = search.q;
+    if (typeof search.position === "string" && isValidPosition(search.position)) {
+      next.position = search.position;
+    }
+    if (typeof search.category === "string" && isValidCategory(search.category)) {
+      next.category = search.category;
+    }
+    if (typeof search.club === "string" && clubs.includes(search.club)) {
+      next.club = search.club;
+    }
+    if (typeof search.ageMin === "number") next.ageMin = search.ageMin;
+    if (typeof search.ageMax === "number") next.ageMax = search.ageMax;
+    if (typeof search.minHeight === "number") next.minHeight = search.minHeight;
+    if (typeof search.minGoals === "number") next.minGoals = search.minGoals;
+    if (typeof search.minAssists === "number") next.minAssists = search.minAssists;
+    if (search.foot === "Izquierdo" || search.foot === "Derecho" || search.foot === "Ambidiestro") {
+      next.foot = search.foot;
+    }
+
+    return next;
+  },
   head: () => ({
     meta: [
       { title: "Explorador de jugadores — YouthScouting" },
@@ -20,28 +71,52 @@ export const Route = createFileRoute("/explorador")({
 });
 
 function ExplorerPage() {
-  const [q, setQ] = useState("");
-  const [position, setPosition] = useState("Todos");
-  const [category, setCategory] = useState("Todas");
-  const [club, setClub] = useState("Todos");
-  const [ageRange, setAgeRange] = useState<[number, number]>([15, 21]);
-  const [minHeight, setMinHeight] = useState(160);
-  const [minGoals, setMinGoals] = useState(0);
-  const [minAssists, setMinAssists] = useState(0);
+  const search = Route.useSearch();
+  const navigate = useNavigate();
+  const initial = resolveExplorerFilters(search);
+
+  const [q, setQ] = useState(initial.q);
+  const [position, setPosition] = useState(initial.position);
+  const [category, setCategory] = useState(initial.category);
+  const [club, setClub] = useState(initial.club);
+  const [ageRange, setAgeRange] = useState<[number, number]>([initial.ageMin, initial.ageMax]);
+  const [minHeight, setMinHeight] = useState(initial.minHeight);
+  const [minGoals, setMinGoals] = useState(initial.minGoals);
+  const [minAssists, setMinAssists] = useState(initial.minAssists);
+  const [foot, setFoot] = useState(initial.foot);
+  const [trait, setTrait] = useState(initial.trait);
+
+  const activePreset = search.preset ? quickFilters[search.preset] : undefined;
 
   const results = useMemo(() => {
-    return players.filter((p) => {
-      if (q && !p.name.toLowerCase().includes(q.toLowerCase())) return false;
-      if (position !== "Todos" && p.position !== position) return false;
-      if (category !== "Todas" && p.category !== category) return false;
-      if (club !== "Todos" && !clubsMatch(p.club, club)) return false;
-      if (p.age < ageRange[0] || p.age > ageRange[1]) return false;
-      if (p.height < minHeight) return false;
-      if (p.goals < minGoals) return false;
-      if (p.assists < minAssists) return false;
-      return true;
+    return filterPlayers({
+      q,
+      position,
+      category,
+      club,
+      ageMin: ageRange[0],
+      ageMax: ageRange[1],
+      minHeight,
+      minGoals,
+      minAssists,
+      foot,
+      trait,
     });
-  }, [q, position, category, club, ageRange, minHeight, minGoals, minAssists]);
+  }, [q, position, category, club, ageRange, minHeight, minGoals, minAssists, foot, trait]);
+
+  function clearFilters() {
+    setQ(defaultExplorerFilters.q);
+    setPosition(defaultExplorerFilters.position);
+    setCategory(defaultExplorerFilters.category);
+    setClub(defaultExplorerFilters.club);
+    setAgeRange([defaultExplorerFilters.ageMin, defaultExplorerFilters.ageMax]);
+    setMinHeight(defaultExplorerFilters.minHeight);
+    setMinGoals(defaultExplorerFilters.minGoals);
+    setMinAssists(defaultExplorerFilters.minAssists);
+    setFoot(defaultExplorerFilters.foot);
+    setTrait(undefined);
+    navigate({ to: "/explorador", search: {} });
+  }
 
   return (
     <div className="min-h-screen bg-surface-900 text-slate-200">
@@ -54,6 +129,21 @@ function ExplorerPage() {
           <p className="mt-2 text-sm text-slate-400">
             {results.length} prospectos encontrados de {players.length} totales
           </p>
+          {activePreset && (
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-brand/30 bg-brand/10 px-4 py-1.5">
+              <span className="text-[10px] font-bold uppercase tracking-widest text-brand">
+                Filtro rápido
+              </span>
+              <span className="text-xs text-white">{activePreset.label}</span>
+              <button
+                type="button"
+                onClick={clearFilters}
+                className="ml-1 text-[10px] font-bold uppercase tracking-wider text-slate-400 hover:text-white"
+              >
+                ×
+              </button>
+            </div>
+          )}
         </header>
 
         <div className="grid gap-6 lg:grid-cols-[240px_260px_1fr]">
@@ -145,16 +235,7 @@ function ExplorerPage() {
             />
 
             <button
-              onClick={() => {
-                setQ("");
-                setPosition("Todos");
-                setCategory("Todas");
-                setClub("Todos");
-                setAgeRange([15, 21]);
-                setMinHeight(160);
-                setMinGoals(0);
-                setMinAssists(0);
-              }}
+              onClick={clearFilters}
               className="w-full rounded-lg border border-white/10 bg-surface-700 py-2 text-xs font-bold uppercase tracking-widest text-white hover:bg-surface-700/70"
             >
               Limpiar filtros

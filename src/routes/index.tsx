@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 import { PlayerCard } from "@/components/PlayerCard";
 import { players, categories } from "@/data/players";
+import { quickFilterIds, quickFilters } from "@/lib/explorer-filters";
+import { formatStatValue, getPlatformStats } from "@/lib/platform-stats";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,6 +26,7 @@ export const Route = createFileRoute("/")({
 
 function HomePage() {
   const featured = players.slice(0, 4);
+  const platformStats = getPlatformStats();
   return (
     <div className="min-h-screen bg-surface-900 text-slate-200">
       <SiteNav />
@@ -91,16 +94,16 @@ function HomePage() {
 
           {/* Filtros rápidos */}
           <div className="mt-6 flex flex-wrap gap-2">
-            {["Reserva", "Quinta", "Zurdos", "Centrales con salida", "Extremos veloces", "Goleadores", "Arqueros modernos"].map(
-              (chip) => (
-                <button
-                  key={chip}
-                  className="rounded-full border border-white/10 bg-surface-800 px-4 py-1.5 text-xs text-slate-300 transition-colors hover:border-brand/40 hover:text-brand"
-                >
-                  {chip}
-                </button>
-              ),
-            )}
+            {quickFilterIds.map((id) => (
+              <Link
+                key={id}
+                to="/explorador"
+                search={{ preset: id }}
+                className="rounded-full border border-white/10 bg-surface-800 px-4 py-1.5 text-xs text-slate-300 transition-colors hover:border-brand/40 hover:text-brand"
+              >
+                {quickFilters[id].label}
+              </Link>
+            ))}
           </div>
         </section>
 
@@ -125,16 +128,13 @@ function HomePage() {
         </section>
 
         {/* Stats banda */}
-        <section className="mt-20 grid grid-cols-2 gap-6 rounded-2xl border border-white/5 bg-surface-800 p-8 md:grid-cols-4">
-          {[
-            { k: "142", v: "Prospectos rastreados" },
-            { k: "24", v: "Clubes cubiertos" },
-            { k: "1.2k", v: "Videos analizados" },
-            { k: "98%", v: "Precisión scouting" },
-          ].map((s) => (
-            <div key={s.v}>
-              <div className="font-display text-4xl font-black text-brand">{s.k}</div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-slate-500">{s.v}</div>
+        <section className="mt-20 grid grid-cols-1 gap-6 rounded-2xl border border-white/5 bg-surface-800 p-8 sm:grid-cols-3">
+          {platformStats.map((stat) => (
+            <div key={stat.label}>
+              <div className="font-display text-4xl font-black text-brand">
+                {formatStatValue(stat.value)}
+              </div>
+              <div className="mt-1 text-xs uppercase tracking-wider text-slate-500">{stat.label}</div>
             </div>
           ))}
         </section>
