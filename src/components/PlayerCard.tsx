@@ -1,10 +1,22 @@
 import { Link } from "@tanstack/react-router";
-import type { Player } from "@/data/players";
+import type { Player, PlayerStatus } from "@/data/players";
 import { formatClubDisplay, getClubFullName } from "@/lib/clubs";
 import { PlayerPhoto } from "@/components/PlayerPhoto";
 
+const statusStyles: Record<PlayerStatus, { label: string; className: string }> = {
+  disponible: {
+    label: "Disponible",
+    className: "border-emerald-500/30 text-emerald-400",
+  },
+  lesionado: {
+    label: "Lesionado",
+    className: "border-red-500/30 text-red-400",
+  },
+};
+
 export function PlayerCard({ player }: { player: Player }) {
   const top = player.basicStats.slice(0, 3);
+  const status = statusStyles[player.status];
   return (
     <Link
       to="/jugador/$id"
@@ -24,8 +36,10 @@ export function PlayerCard({ player }: { player: Player }) {
           >
             {formatClubDisplay(player.club)}
           </span>
-          <span className="shrink-0 rounded-full border border-brand/30 bg-black/60 px-3 py-1 text-[10px] font-bold uppercase text-brand backdrop-blur-md">
-            ★ {player.rating.toFixed(1)}
+          <span
+            className={`shrink-0 rounded-full border bg-black/60 px-3 py-1 text-[10px] font-bold uppercase backdrop-blur-md ${status.className}`}
+          >
+            {status.label}
           </span>
         </div>
         <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-surface-800 via-surface-800/80 to-transparent p-4">

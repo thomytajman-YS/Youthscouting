@@ -16,6 +16,7 @@ import yaciuk from "@/assets/yaciuk.jpg";
 
 export type BasicStat = { label: string; value: string | number };
 export type Clip = { title: string; duration: string; thumb: string; url?: string };
+export type PlayerStatus = "disponible" | "lesionado";
 
 export type Player = {
   id: string;
@@ -40,6 +41,7 @@ export type Player = {
   clips: Clip[];
   videos: Clip[];
   rating: number;
+  status: PlayerStatus;
 };
 
 export const players: Player[] = [
@@ -58,6 +60,7 @@ export const players: Player[] = [
     agent: "Hernán Berman",
     image: parmo,
     rating: 8.8,
+    status: "disponible",
     goals: 4,
     assists: 0,
     basicStats: [
@@ -105,6 +108,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: perezCurci,
     rating: 8.5,
+    status: "disponible",
     goals: 2,
     assists: 3,
     basicStats: [
@@ -138,6 +142,7 @@ export const players: Player[] = [
     agent: "The Elegant Game",
     image: acosta,
     rating: 8.7,
+    status: "disponible",
     goals: 1,
     assists: 1,
     basicStats: [
@@ -185,6 +190,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: baju,
     rating: 8.4,
+    status: "disponible",
     goals: 0,
     assists: 4,
     basicStats: [
@@ -218,6 +224,7 @@ export const players: Player[] = [
     agent: "Interplayers",
     image: gorosito,
     rating: 8.6,
+    status: "disponible",
     goals: 0,
     assists: 1,
     basicStats: [
@@ -265,6 +272,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: aranda,
     rating: 9.0,
+    status: "disponible",
     goals: 3,
     assists: 4,
     basicStats: [
@@ -298,6 +306,7 @@ export const players: Player[] = [
     agent: "SP",
     image: herrera,
     rating: 8.5,
+    status: "disponible",
     goals: 1,
     assists: 0,
     basicStats: [
@@ -331,6 +340,7 @@ export const players: Player[] = [
     agent: "Hernán Berman",
     image: escudero,
     rating: 8.7,
+    status: "disponible",
     goals: 0,
     assists: 1,
     basicStats: [
@@ -364,6 +374,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: sosa,
     rating: 8.9,
+    status: "disponible",
     goals: 2,
     assists: 5,
     basicStats: [
@@ -397,6 +408,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: mateoMartinez,
     rating: 8.3,
+    status: "disponible",
     goals: 2,
     assists: 0,
     basicStats: [
@@ -430,6 +442,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: rivas,
     rating: 8.4,
+    status: "disponible",
     goals: 1,
     assists: 2,
     basicStats: [
@@ -463,6 +476,7 @@ export const players: Player[] = [
     agent: "FC3 Sports",
     image: blanco,
     rating: 8.2,
+    status: "disponible",
     goals: 0,
     assists: 3,
     basicStats: [
@@ -496,6 +510,7 @@ export const players: Player[] = [
     agent: "Sin representante confirmado",
     image: yaciuk,
     rating: 8.6,
+    status: "disponible",
     goals: 5,
     assists: 3,
     basicStats: [
@@ -529,6 +544,7 @@ export const players: Player[] = [
     agent: "Dodici",
     image: ladstatter,
     rating: 8.5,
+    status: "disponible",
     goals: 2,
     assists: 4,
     basicStats: [
@@ -562,6 +578,7 @@ export const players: Player[] = [
     agent: "Lesco.Group",
     image: stenta,
     rating: 8.8,
+    status: "disponible",
     goals: 7,
     assists: 2,
     basicStats: [
