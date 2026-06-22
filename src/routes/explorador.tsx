@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { SiteNav } from "@/components/SiteNav";
 import { PlayerCard } from "@/components/PlayerCard";
 import { ClubsSidebar } from "@/components/ClubsSidebar";
@@ -7,57 +7,14 @@ import { players, positions, categories, clubs } from "@/data/players";
 import {
   defaultExplorerFilters,
   filterPlayers,
-  isQuickFilterId,
-  isValidCategory,
-  isValidPosition,
+  parseExplorerSearch,
   quickFilters,
   resolveExplorerFilters,
-  type QuickFilterId,
 } from "@/lib/explorer-filters";
 import { getClubFullName } from "@/lib/clubs";
 
-type ExplorerSearch = {
-  preset?: QuickFilterId;
-  q?: string;
-  position?: string;
-  category?: string;
-  club?: string;
-  ageMin?: number;
-  ageMax?: number;
-  minHeight?: number;
-  minGoals?: number;
-  minAssists?: number;
-  foot?: "Izquierdo" | "Derecho" | "Ambidiestro";
-};
-
 export const Route = createFileRoute("/explorador")({
-  validateSearch: (search: Record<string, unknown>): ExplorerSearch => {
-    const next: ExplorerSearch = {};
-
-    if (typeof search.preset === "string" && isQuickFilterId(search.preset)) {
-      next.preset = search.preset;
-    }
-    if (typeof search.q === "string") next.q = search.q;
-    if (typeof search.position === "string" && isValidPosition(search.position)) {
-      next.position = search.position;
-    }
-    if (typeof search.category === "string" && isValidCategory(search.category)) {
-      next.category = search.category;
-    }
-    if (typeof search.club === "string" && clubs.includes(search.club)) {
-      next.club = search.club;
-    }
-    if (typeof search.ageMin === "number") next.ageMin = search.ageMin;
-    if (typeof search.ageMax === "number") next.ageMax = search.ageMax;
-    if (typeof search.minHeight === "number") next.minHeight = search.minHeight;
-    if (typeof search.minGoals === "number") next.minGoals = search.minGoals;
-    if (typeof search.minAssists === "number") next.minAssists = search.minAssists;
-    if (search.foot === "Izquierdo" || search.foot === "Derecho" || search.foot === "Ambidiestro") {
-      next.foot = search.foot;
-    }
-
-    return next;
-  },
+  validateSearch: parseExplorerSearch,
   head: () => ({
     meta: [
       { title: "Explorador de jugadores — YouthScouting" },
@@ -73,18 +30,31 @@ export const Route = createFileRoute("/explorador")({
 function ExplorerPage() {
   const search = Route.useSearch();
   const navigate = useNavigate();
-  const initial = resolveExplorerFilters(search);
+  const resolved = useMemo(() => resolveExplorerFilters(search), [search]);
 
-  const [q, setQ] = useState(initial.q);
-  const [position, setPosition] = useState(initial.position);
-  const [category, setCategory] = useState(initial.category);
-  const [club, setClub] = useState(initial.club);
-  const [ageRange, setAgeRange] = useState<[number, number]>([initial.ageMin, initial.ageMax]);
-  const [minHeight, setMinHeight] = useState(initial.minHeight);
-  const [minGoals, setMinGoals] = useState(initial.minGoals);
-  const [minAssists, setMinAssists] = useState(initial.minAssists);
-  const [foot, setFoot] = useState(initial.foot);
-  const [trait, setTrait] = useState(initial.trait);
+  const [q, setQ] = useState(resolved.q);
+  const [position, setPosition] = useState(resolved.position);
+  const [category, setCategory] = useState(resolved.category);
+  const [club, setClub] = useState(resolved.club);
+  const [ageRange, setAgeRange] = useState<[number, number]>([resolved.ageMin, resolved.ageMax]);
+  const [minHeight, setMinHeight] = useState(resolved.minHeight);
+  const [minGoals, setMinGoals] = useState(resolved.minGoals);
+  const [minAssists, setMinAssists] = useState(resolved.minAssists);
+  const [foot, setFoot] = useState(resolved.foot);
+  const [trait, setTrait] = useState(resolved.trait);
+
+  useEffect(() => {
+    setQ(resolved.q);
+    setPosition(resolved.position);
+    setCategory(resolved.category);
+    setClub(resolved.club);
+    setAgeRange([resolved.ageMin, resolved.ageMax]);
+    setMinHeight(resolved.minHeight);
+    setMinGoals(resolved.minGoals);
+    setMinAssists(resolved.minAssists);
+    setFoot(resolved.foot);
+    setTrait(resolved.trait);
+  }, [resolved]);
 
   const activePreset = search.preset ? quickFilters[search.preset] : undefined;
 

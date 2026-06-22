@@ -1,4 +1,5 @@
-import { categories, players, positions, type Player } from "@/data/players";
+import { z } from "zod";
+import { categories, players, positions, clubs, type Player } from "@/data/players";
 import { clubsMatch } from "@/lib/clubs";
 
 export const quickFilterIds = [
@@ -12,6 +13,44 @@ export const quickFilterIds = [
 ] as const;
 
 export type QuickFilterId = (typeof quickFilterIds)[number];
+
+export const explorerSearchSchema = z.object({
+  preset: z.enum(quickFilterIds).optional(),
+  q: z.string().optional(),
+  position: z.string().optional(),
+  category: z.string().optional(),
+  club: z.string().optional(),
+  ageMin: z.coerce.number().optional(),
+  ageMax: z.coerce.number().optional(),
+  minHeight: z.coerce.number().optional(),
+  minGoals: z.coerce.number().optional(),
+  minAssists: z.coerce.number().optional(),
+  foot: z.enum(["Izquierdo", "Derecho", "Ambidiestro"]).optional(),
+});
+
+export type ExplorerSearch = z.infer<typeof explorerSearchSchema>;
+
+export function parseExplorerSearch(search: Record<string, unknown>): ExplorerSearch {
+  const parsed = explorerSearchSchema.safeParse(search);
+  if (!parsed.success) return {};
+
+  const next: ExplorerSearch = {};
+  const data = parsed.data;
+
+  if (data.preset) next.preset = data.preset;
+  if (data.q) next.q = data.q;
+  if (data.position && isValidPosition(data.position)) next.position = data.position;
+  if (data.category && isValidCategory(data.category)) next.category = data.category;
+  if (data.club && clubs.includes(data.club)) next.club = data.club;
+  if (data.ageMin != null && Number.isFinite(data.ageMin)) next.ageMin = data.ageMin;
+  if (data.ageMax != null && Number.isFinite(data.ageMax)) next.ageMax = data.ageMax;
+  if (data.minHeight != null && Number.isFinite(data.minHeight)) next.minHeight = data.minHeight;
+  if (data.minGoals != null && Number.isFinite(data.minGoals)) next.minGoals = data.minGoals;
+  if (data.minAssists != null && Number.isFinite(data.minAssists)) next.minAssists = data.minAssists;
+  if (data.foot) next.foot = data.foot;
+
+  return next;
+}
 
 export type QuickFilterTrait =
   | "centrales-con-salida"
@@ -121,7 +160,7 @@ export function filterPlayers(filters: typeof defaultExplorerFilters): Player[] 
 }
 
 export function resolveExplorerFilters(
-  search: { preset?: QuickFilterId } & Partial<ExplorerFilters>,
+  search: ExplorerSearch,
 ): typeof defaultExplorerFilters {
   const preset = search.preset ? quickFilters[search.preset]?.filters : undefined;
 
@@ -136,7 +175,7 @@ export function resolveExplorerFilters(
     minGoals: search.minGoals ?? preset?.minGoals ?? defaultExplorerFilters.minGoals,
     minAssists: search.minAssists ?? preset?.minAssists ?? defaultExplorerFilters.minAssists,
     foot: search.foot ?? preset?.foot ?? defaultExplorerFilters.foot,
-    trait: search.trait ?? preset?.trait,
+    trait: preset?.trait,
   };
 }
 

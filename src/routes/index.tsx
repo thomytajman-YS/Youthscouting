@@ -99,6 +99,7 @@ function HomePage() {
                 key={id}
                 to="/explorador"
                 search={{ preset: id }}
+                preload="intent"
                 className="rounded-full border border-white/10 bg-surface-800 px-4 py-1.5 text-xs text-slate-300 transition-colors hover:border-brand/40 hover:text-brand"
               >
                 {quickFilters[id].label}
